@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ecf0f14b;
+    margin-top: -1em;
+    padding: 2em 0.5em 1em 0;
+    display: flex;
+    border-bottom: 1px solid #2f3640;
+    border-radius: 0.5em;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header a img {
+    border-radius: 0.8rem;
+    width: 100%;
+    max-width: 4rem;   
+}
+header a {
+    padding-left: 1rem;    
+}
+
+/* nav {
+    border: 1px solid #2f3640;
+} */
+
+nav ul {
+    list-style-type: none;
+    display: flex;    
+    flex-wrap: wrap;
+    padding-top: 0.6rem;    
+}
+
+nav a {
+    text-decoration: none;
+    color: #2f3640;
+    border: 1px solid #2f3640;
+    border-radius: 0.3rem;
+    padding: 0.5em;
+    margin: 0 0.2rem;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #2f3640;
+}
+main {
+    text-align: center;
+}
+
+#home{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    background-image: url(./assets/img/background.jpg); 
+    border-radius: 1rem;  
+    height: 80vh;
+    width: 90%;
+}
+
+#home-sub {
+    color: #ffffff;
+    background-color: #2f3640c1;
+    max-width: 35vh;
+    position: absolute;
+    padding: 1.5em;
+    margin-top: 50vh;
+    margin-left: 10vh;
+}
+
+#secondary {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.secondary {
+    background-color: #2f364074;
+    border-radius: 2rem;
+    padding: 1rem;
+    
+}
+
+.secondary img {
+    display: block;    
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 300px;
+}
+
+table {    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+table, th, td {
+    border: 1px solid #2f3640;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid #2f3640;
+    border-radius: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+footer .fa {
+    padding: 1rem;
+    
+    font-size: xx-large;
+}
