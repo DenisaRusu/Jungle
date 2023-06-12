@@ -118,3 +118,30 @@ footer .fa {
     
     font-size: xx-large;
 }
+.newsContainer{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.newsBlock{
+    border: solid 2px rgb(11, 59, 25);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 15px 15px 15px rgb(11, 59, 25);
+    margin: 20px 10px 5px 30px;
+}
+.newsBlock img{
+    max-width: 100%;
+    vertical-align: bottom;
+    float: right;
+    height: auto;
+}
+.newsBlockContent{
+    display: inline-flex;
+}
+.newsTitle{
+    font-size:medium;
+}
+.newsParagraph{
+    float: left;
+}
