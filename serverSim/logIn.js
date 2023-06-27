@@ -1,5 +1,6 @@
 import dataBase from './dataBase.js';
 
+let isUserLoggedIn = false;
 const usersDataBase = dataBase();
 const loginInput = document.getElementById('login-form');
 const loginBtn = loginInput[3];
@@ -12,6 +13,7 @@ loginInput.addEventListener('submit', (e) => {
 
   if (checkUserInDB(emailInput, passwordInput)) {
     alert('login sucesfuly');
+    isUserLoggedIn = true;
     location.reload();
   }
 
@@ -46,7 +48,7 @@ function setCookie(username, emailInput) {
 
   //expiration 12 h -> ime measured in milisec test for 1h
   let date = new Date();
-  date.setTime(date.getTime() + 1 * 1 * 60 * 1000);
+  date.setTime(date.getTime() + 12 * 60 * 60 * 1000);
   const expire = date.toGMTString();
 
   const userData = usersDataBase.filter((item) => item.email === emailInput);
@@ -66,8 +68,6 @@ function setCookie(username, emailInput) {
   document.cookie = `userName=${username}; expires=${expire};SameSite=None; Secure`;
 }
 
-function saveTokenOnDB() {}
-
 function uuidv4() {
   return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
     (
@@ -76,3 +76,5 @@ function uuidv4() {
     ).toString(16)
   );
 }
+
+export default isUserLoggedIn;

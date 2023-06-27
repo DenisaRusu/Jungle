@@ -11,7 +11,7 @@
     <script src="./serverSim/logIn.js" type="module" defer></script>
     <script src="./serverSim/register.js" type="module" defer></script>
     <script src="getCookies.js" type="module" defer></script>
-    <script src="./checkUserCookies.js" type="module" defer></script>
+    <script src="./checkLogIn.js" type="module" defer></script>
 
 </head>
 
@@ -19,13 +19,16 @@
     <!-- Header section -->
     <header>
         <img src="logo.png" alt="" class="logo">
+
         <nav class="navigation">
             <a href="">Home</a>
             <a href="">About</a>
             <a href="">Services</a>
             <a href="">Contact</a>
             <a href="./secPages/takeAction.html"> Take Action</a>
-            <button class="button-login">Login</button>
+            <button id="logIn-btn" class="button-login">Login</button>
+            <button id="logOut-btn" class="button-login">LogOut</button>
+            <span id="loggedIn-msg" class="login-msg"></span>
         </nav>
     </header>
     <!-- Login box -->

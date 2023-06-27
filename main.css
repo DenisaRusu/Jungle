@@ -284,3 +284,12 @@ header {
   width: 100%;
   opacity: 10%;
 }
+
+#logOut-btn {
+  display: none;
+}
+
+.login-msg {
+  display: none;
+  padding-left: 5px;
+}
