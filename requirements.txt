@@ -1,0 +1,42 @@
+Each team should create a project that will have HTML, CSS and Javascript(optional) as technologies. Excellence criteria: 
+-	Responsiveness with media querries
+-	Layout with flexbox or grid
+-	Navigation
+-	Pseudoclasses, pseudoelements
+-	REGEX
+-	No div soup
+-	No inline-styling
+-	 White spacing correctly used
+-	External fonts and stylesheets
+-	Forms with validations
+-	Tables
+-	Icons
+-	OOP 
+-	Promises
+-	Web Requests
+-	DOM Manipulation
+-	Events
+-	localStorage / database / JSON files -> you can pick one or more 
+-	Search functionality
+-	Filter functionality
+-	Modal windows
+
+Additionally : create a game together …. No rock-paper-scissor, please!
+Good luck! Remember, this is a team-work and everyone should contribute. Do not delegate this to one person … everyone should understand and work on it.
+Deadline : 8 weeks
+
+Rules: 
+1.	Each team has to meet/talk privately and pick a name for the team. Everyone in the team needs to be present to the meeting;
+2.	Each team should pick a subject from the list of STILL available subjects
+3.	When one team has both picked the subject and the name, they HAVE to announce it on the WhatsaApp Channel. In that moment BOTH the keywords chosen for the name AND the subject become unavailable for the other teams. So hurry up and pick the coolest name for the team and most importantly your favorite SUBJECT.
+Naming conventions for the teams: 
+A.	Each team should pick their first word ONLY from one of the following words: Obsidian, Adamantium, Diamond, Crystal, Emerald, Mud, Rock, Leaf, Sky, Ocean, Lava.
+B.	Each team should pick their second word from the following: Hobbits, Dragons, Vampires, Werewolves, Magicians, Angels, Titans, Centaurs, Unicorns, Ninjas.
+C.	The final name should be something like Stone Spiders or Sapphire Serpents.
+List of subjects: 
+I.	Colonization on Mars
+II.	Alchemy, Potions and other magical branches
+III.	Luxury and opulence 
+IV.	Jungle ecosystems
+V.	Disney Universe
+VI.	Culture, Traditions, Celebrations around the world

@@ -1,92 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jungle Ecosystems</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./serverSim/checkUserCookies.js" type="module" defer></script>
+    <script src="./serverSim/logIn.js" type="module" defer></script>
+    <script src="./serverSim/register.js" type="module" defer></script>
+    <script src="getCookies.js" type="module" defer></script>
+    <script src="./checkUserCookies.js" type="module" defer></script>
+
 </head>
+
 <body>
+    <!-- Header section -->
     <header>
-        <a href="#home">
-            <img src="assets/img/coding.gif" alt="">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#knowTheJungle">Get to know the jungle</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#about">About us</a> </li>
-            </ul>      
+        <img src="logo.png" alt="" class="logo">
+        <nav class="navigation">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
+            <a href="./secPages/takeAction.html"> Take Action</a>
+            <button class="button-login">Login</button>
         </nav>
-        <div>
-            <form action="#">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <form action="#">
-                <input type="text" placeholder="Filter?">
-                <button type="submit">Filter?<i class="fa fa-filter"></i></button>
-            </form>
-        </div>
     </header>
+    <!-- Login box -->
     <main>
-        <section id="home">
-            <div id="home-sub">
-                <p>Lorem ipsum dolor text ? link? Get involved?</p>
+        <div class="box">
+            <!-- symbol for closing the login pop-up -->
+            <span class="close-button">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+
+            <!-- LOGIN TAB -->
+            <div class="login-box login">
+                <h2>Login</h2>
+
+                <!-- Form section for login box -->
+                <form id="login-form">
+                    <!-- Email section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-unread-outline"></ion-icon></span>
+                        <input type="email">
+                        <label>Email</label>
+                    </div>
+
+                    <!-- Password section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span>
+                        <input type="password">
+                        <label>Password</label>
+                    </div>
+
+                    <!-- Remember me section -->
+                    <div class="remember-me">
+                        <label for="">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <!-- Forgot password section -->
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <!-- Submit section -->
+                    <button type="submit" class="btn ">Login</button>
+
+                    <!-- Don't have an account -->
+                    <div class="register">
+                        <p>
+                            Don't have an account yet?
+                            <a href="#" class="register-link">Register</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-        </section>
-        <section id="secondary">
-            <div class="secondary">
-                <img src="assets/img/background1.jpeg" alt="">
+
+            <!-- REGISTER TAB -->
+            <div class="login-box register">
+                <h2>Registration</h2>
+                <!-- Form section for login box -->
+                <form id="register-form">
+                    <!-- User Section -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <input type="text" pattern="[a-zA-Z0-9]{2,10}"
+                            title="Must include only letters and numbers, at least 2 characters long but no more than 10"
+                            required>
+                        <label>Username</label>
+                    </div>
+                    <!-- Email section -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail-unread-outline"></ion-icon>
+                        </span>
+                        <input type="email" pattern="^\w+([\.-]?\w)*@\w+(\.\w{2,3})+$" required
+                            title="Must be similar with the following: x@x.xx">
+                        <label>Email</label>
+                    </div>
+                    <!-- Password section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span>
+                        <input type="password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$"
+                            required
+                            title="Password should be a combination(8 to 16 char) of uppercase letters, lowercase letters, numbers, and symbols(!@#$%^&*)">
+                        <label>Password</label>
+                    </div>
+                    <!-- Remember me section -->
+                    <div class="remember-me">
+                        <label for="">
+                            <input type="checkbox" required>
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                    <!-- Submit section -->
+                    <button type="submit" class="btn">Register</button>
+                    <div class="register">
+                        <p>
+                            Already have an account?
+                            <a href="#" class="login-link">Login</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-            <div class="secondary">
-                <img src="assets/img/background1.jpeg" alt="">
-            </div>
-            <div class="secondary">
-                <img src="assets/img/background1.jpeg" alt="">
-            </div>
-        </section>
-        <section>
-            <table>
-                <tr>
-                    <th>deforestation</th>
-                    <th>ani</th>
-                    <th>procente</th>
-                </tr>
-                <tr>
-                    <td>date</td>
-                    <td>date</td>
-                    <td>date</td>
-                </tr>
-                <tr>
-                    <td>date</td>
-                    <td>date</td>
-                    <td>date</td>
-                </tr><tr>
-                    <td>date</td>
-                    <td>date</td>
-                    <td>date</td>
-                </tr>
-                <tr>
-                    <td>date</td>
-                    <td>date</td>
-                    <td>date</td>
-                </tr><tr>
-                    <td>date</td>
-                    <td>date</td>
-                    <td>date</td>
-                </tr>
-            </table>
+
+        </div>
+        <section id="home2" class="background-section">
+            <img src="bun/background_final.png" alt="" class="static">
+            <h1 id="title">
+                Let's explore the Jungle!
+            </h1>
+            <img src="bun/background_final_front.png" alt="" class="static">
+            <!-- <img src="bun/movable 2.png" alt="" id="miscare1">
+            <img src="bun/movable 3.png" alt="" id="miscare3"> -->
         </section>
     </main>
-    <footer>
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-youtube"></i>
-    </footer>
+    <div class="second-background">
+        <img class="image21" src="bun/background_final_2.png" alt="">
+        <!-- <h1 class="test"> 
+            lala
+        </h1>
+        <p>
+            fsdgsdfhghgfhdggh
+        </p>
+        <p>dgdfgdgd</p> -->
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

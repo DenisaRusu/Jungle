@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="styleTakeAction.css">
+    <script src="takeaction.js" defer></script>
+    <script src="validation.js" defer></script>
+    <script src="saveData.js" defer></script>
+
+
+
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <img src="../logo.png" alt="" class="logo">
+        <nav class="navigation">
+            <a href="../index.html">Home</a>
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
+            <a href="#">Take Action</a>
+            <button class="button-login">Login</button>
+        </nav>
+    </header>
+    <h1>
+        Take Action Today!
+    </h1>
+    <main>
+        <!-- donate section -->
+        <section class=" donate">
+            <h3>Make a Monthly/One Time Donation</h3>
+            <p>
+                You can protect threatened species and their habitats today with a monthly donation to Ocean Titans
+                Fund. Your support of OTF's global conservation work will make a world of difference.
+            </p>
+            <form id="donate-form">
+
+                <div class="donate">
+                    <input type="button" value="&euro; 100 " money-btn class="btn btn-button" />
+                    <input type="button" value="&euro; 50 " money-btn class="btn btn-button" />
+                    <input type="button" value="&euro; 25 " money-btn class="btn btn-button" />
+                    <input type="button" value="&euro; 20 " money-btn class="btn btn-button" />
+                    <input type="button" value="&euro; 10 " money-btn class="btn btn-button" />
+                    <input type="button" value="&euro; 5 " money-btn class="btn btn-button" />
+
+                    <input type="button" id="other" value="Other" money-btn class="btn btn-button" size="6" />
+                </div>
+                <fieldset class="border">
+                    <legend>Donor Information:</legend>
+                    <div>
+                        <label for="fname">*First name:</label>
+                        <input class="save-data" type="text" id="fname" name="fname" pattern="[A-Za-z]{2,10}" required
+                            title="Must include only letters, least 2 letters long but no more than 10">
+                    </div>
+                    <div>
+                        <label for=" lname">*Last name:</label>
+                        <input class="save-data" type="text" id="lname" name="lname" pattern="[A-Za-z]{2,10}" required
+                            title="Must include only letters, least 2 letters long but no more than 10">
+                    </div>
+                    <div>
+                        <label for="email">*Email:</label>
+                        <input class="save-data" id="email" name="email" type="email"
+                            pattern="^\w+([\.-]?\w)*@\w+(\.\w{2,3})+$" required
+                            title="Must be similar with the following format x@x.xx">
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input class="save-data" type="text" id="city" name="city">
+                    </div>
+                    <div>
+                        <label for="birthday">*Birthday:</label>
+                        <input class="save-data" type="date" id="birthday" name="birthday" min="1920-01-01"
+                            max="2009-01-01" required title="Must be at least 14 years of age">
+                    </div>
+
+
+                    <div>
+                        <label for="card_number">*Credit Card Number: </label>
+                        <input class="save-data" type='text' autocomplete="off" pattern="[0-9]{15,16}" value=""
+                            name="card_number" required
+                            title="Must include only numbers, at least 15 and no more than 16 numbers long">
+                        <!-- required -->
+
+                    </div>
+                    <div>
+                        <label>*Expiration Date</label>
+                        <select class="save-data" class="#" name="card_exp_date_month" required>
+                            <option value="1" selected="">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="card_exp_date_year" name="card_exp_date_year" required>
+                            <option class="save-data" value="2024" selected="selected">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2031">2031</option>
+                            <option value="2032">2032</option>
+                            <option value="2033">2033</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="" for="card_cvv">*CVV Number: </label>
+                        <input class="save-data" type="text" autocomplete="off" value="" name="card_cvv"
+                            pattern="[0-9]{3,4}" required
+                            title="Must include only numbers, at least 3 and no more than 4 numbers long">
+                    </div>
+                    <a class="info align-left" title="What is CVV number? Opens new window."
+                        href="https://secure2.convio.net/help/site/SPageServer?pagename=user_donation_cvv"
+                        target="_blank">What is CVV number?</a>
+                    <p class="info">* required fields</p>
+                    <img src="payment-icons.png" class="cards-icons" alt="creditPaymentIcons">
+
+                    <div class="block">
+                        <input id="donation-monthly" type="button" value="Monthly" class="btn btn-button ">
+                        <input id="donation-one-time" type="button" value="One Time" class="btn btn-button ">
+
+                        <input id="donation-value" type="submit" value="Donate ? &euro; Monthly"
+                            class="btn btn-button ">
+                    </div>
+                </fieldset>
+
+                <p>When you click the button above,
+                    your
+                    monthly donation will be
+                    processed.
+                </p>
+                <p><strong>Ocean Titans Fund</strong> is a <strong>charitable non-profit organisation</strong>.
+                </p>
+            </form>
+
+            <!-- <div>Card Number is required.</div> -->
+            <!-- <div class="CardExpDateError ErrorMessage">Valid expiration date is required.</div> -->
+            <!-- <div class="CVVError ErrorMessage">CVV Number is required.</div> -->
+        </section>
+
+        <!-- volunteer section -->
+        <section class=" donate">
+            <h3>Take Action as a Volunteer</h3>
+
+            <p>
+                If you are concerned about threatened species and their habitats; the planet and the future of humanity;
+                concerned about the kind of world we, our children and grandchildren will be living in <strong>JOIN US
+                    TODAY!</strong>
+                We welcome volunteers with a variety of skills and background.
+            </p>
+            <p>There is need for everybody. We work with joy; there's always something exciting happening, so why wait,
+                join the team!
+            </p>
+            <p><strong>We would love to have you on board, even if it's a few hours per week!</strong></p>
+            <form>
+
+                <fieldset class="border">
+                    <legend>Volunteer form:</legend>
+                    <div>
+                        <label for="v-fname">*First name:</label>
+                        <input type="text" id="v-fname" name="v-fname" pattern="[A-Za-z]{2,10}" required
+                            title="Must include only letters, least 2 letters long but no more than 10">
+                    </div>
+                    <div>
+                        <label for="v-lname">*Last name:</label>
+                        <input type="text" id="v-lname" name="v-lname" pattern="[A-Za-z]{2,10}" required
+                            title="Must include only letters, least 2 letters long but no more than 10">
+                    </div>
+                    <div>
+                        <label for="v-email">*Email:</label>
+                        <input id="v-email" name="v-email" type="email" pattern="^\w+([\.-]?\w)*@\w+(\.\w{2,3})+$"
+                            required title="Must be similar with the following format x@x.xx">
+                    </div>
+                    <div>
+                        <label for="v-country">Country of Residence:</label>
+                        <input type="text" id="v-country" name="city">
+                    </div>
+                    <div>
+                        <label for="v-birthday">*Birthday:</label>
+                        <input type="date" id="v-birthday" name="birthday" min="1920-01-01" max="2009-01-01" required
+                            title="Must be at least 14 years of age">
+                    </div>
+
+
+                    <div>
+
+                    </div>
+                    <div>
+                        <label for="hours-volunter">Hours you'd like to volunteer: </label>
+                        <select class="#" name="hours-volunter" id="hours-volunter" aria-required="true">
+                            <option value="1" selected="">8 /Month</option>
+                            <option value="2">12 /Month</option>
+                            <option value="3">24 / Month </option>
+                            <option value="3">Other </option>
+                        </select>
+
+                    </div>
+                    <div class="texarea-resize"><label for="message">Message:</label> <br>
+                        <textarea name="message" id="message"
+                            onInput="this.parentNode.dataset.replicatedValue = this.value" rows="10"
+                            placeholder="Please write something about yourself and your interests"></textarea>
+                    </div>
+
+                    <p class="info">* required fields</p>
+                    <div class="block">
+                        <input type="submit" value="Join Now" class="btn btn-button ">
+                    </div>
+
+                </fieldset>
+                <p><strong>Ocean Titans Fund</strong> is a <strong>charitable non-profit organisation</strong>.
+
+            </form>
+
+            <!-- <div>Card Number is required.</div> -->
+            <!-- <div class="CardExpDateError ErrorMessage">Valid expiration date is required.</div> -->
+            <!-- <div class="CVVError ErrorMessage">CVV Number is required.</div> -->
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../script.js"></script> -->
+</body>
+
+</html>

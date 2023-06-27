@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="styleTakeAction.css">
+
+
+</head>
+
+<body>
+    <!-- Login box -->
+    <main>
+        <div class="box">
+            <!-- symbol for closing the login pop-up -->
+            <span class="close-button">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+
+            <!-- LOGIN TAB -->
+            <div class="login-box login">
+                <h2>Login</h2>
+
+                <!-- Form section for login box -->
+                <form action="#">
+                    <!-- Email section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-unread-outline"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+
+                    <!-- Password section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <!-- Remember me section -->
+                    <div class="remember-me">
+                        <label for="">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+
+                        <!-- Forgot password section -->
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <!-- Submit section -->
+                    <button type="submit" class="btn">Login</button>
+
+                    <!-- Don't have an account -->
+                    <div class="register">
+                        <p>
+                            Don't have an account yet?
+                            <a href="#" class="register-link">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- REGISTER TAB -->
+            <div class="login-box register">
+                <h2>Registration</h2>
+                <!-- Form section for login box -->
+                <form action="#">
+                    <!-- User Section -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <!-- Email section -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail-unread-outline"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <!-- Password section -->
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <!-- Remember me section -->
+                    <div class="remember-me">
+                        <label for="">
+                            <input type="checkbox">
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                    <!-- Submit section -->
+                    <button type="submit" class="btn">Register</button>
+                    <div class="register">
+                        <p>
+                            Already have an account?
+                            <a href="#" class="login-link">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="../script.js"></script>
+</body>
+
+</html>

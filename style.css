@@ -1,27 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(38, 3, 31);
 }
 
 header {
-    background-color: #ecf0f14b;
-    margin-top: -1em;
-    padding: 2em 0.5em 1em 0;
-    display: flex;
-    border-bottom: 1px solid #2f3640;
-    border-radius: 0.5em;    
-    flex-wrap: wrap;
-    justify-content: space-between;
+  margin-top: -1em;
+  padding: 2em 0.5em 1em 0;
+  display: flex;
+  border-bottom: 2px solid rgb(38, 3, 31);
+  border-radius: 0.5em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99;
 }
 
 header a img {
-    border-radius: 0.8rem;
-    width: 100%;
-    max-width: 4rem;   
+  border-radius: 0.8rem;
+  width: 100%;
+  max-width: 4rem;
 }
 header a {
-    padding-left: 1rem;    
+  padding-left: 1rem;
 }
 
 /* nav {
@@ -29,30 +41,30 @@ header a {
 } */
 
 nav ul {
-    list-style-type: none;
-    display: flex;    
-    flex-wrap: wrap;
-    padding-top: 0.6rem;    
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.6rem;
 }
 
 nav a {
-    text-decoration: none;
-    color: #2f3640;
-    border: 1px solid #2f3640;
-    border-radius: 0.3rem;
-    padding: 0.5em;
-    margin: 0 0.2rem;
+  text-decoration: none;
+  color: #2f3640;
+  border: 1px solid #2f3640;
+  border-radius: 0.3rem;
+  padding: 0.5em;
+  margin: 0 0.2rem;
 }
 
 nav a:hover {
-    color: #ffffff;
-    background-color: #2f3640;
+  color: #ffffff;
+  background-color: #2f3640;
 }
 main {
-    text-align: center;
+  text-align: center;
 }
 
-#home{
+/* #home{
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5rem;
@@ -60,61 +72,91 @@ main {
     border-radius: 1rem;  
     height: 80vh;
     width: 90%;
+} */
+.paralax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform: translateY(-170px);
 }
-
-#home-sub {
-    color: #ffffff;
-    background-color: #2f3640c1;
-    max-width: 35vh;
-    position: absolute;
-    padding: 1.5em;
-    margin-top: 50vh;
-    margin-left: 10vh;
+.paralax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
 }
-
+.text {
+  position: absolute;
+  font-size: 5rem;
+  transform: translateY(-100px);
+  color: #25031e;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+#miscare3 {
+  margin-left: 0;
+  /* margin-bottom: 0; */
+}
+#miscare1 {
+  margin-left: 0px;
+}
 #secondary {
-    padding: 5rem 0;
-    display: flex;
-    justify-content: space-evenly;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20vh;
 }
 .secondary {
-    background-color: #2f364074;
-    border-radius: 2rem;
-    padding: 1rem;
-    
+  background-color: #ffffff;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 
 .secondary img {
-    display: block;    
-    border-radius: 2rem;
-    width: 100%;
-    height: 100%;
-    max-width: 350px;
-    max-height: 300px;
+  display: block;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 300px;
 }
 
-table {    
-    margin-left: auto;
-    margin-right: auto;
-    
+table {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
 }
 
-table, th, td {
-    border: 1px solid #2f3640;
-    border-collapse: collapse;
-    padding: 1rem;
+table,
+th,
+td {
+  border: 1px solid #ffffff;
+  border-collapse: collapse;
+  padding: 1rem;
 }
 
 footer {
-    margin-top: 1rem;
-    border-top: 1px solid #2f3640;
-    border-radius: 2rem;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
+  margin-top: 1rem;
+  border-top: 1px solid #2f3640;
+  border-radius: 2rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
 }
 footer .fa {
-    padding: 1rem;
-    
-    font-size: xx-large;
+  padding: 1rem;
+
+  font-size: xx-large;
+}
+
+@media only screen and (max-width: 1200px) {
+  .paralax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+  }
 }

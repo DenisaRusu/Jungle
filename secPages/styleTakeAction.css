@@ -1,0 +1,133 @@
+body {
+  background-color: #16a08488;
+  color: #093b30;
+}
+header {
+  background-color: #16a085;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+}
+h1 {
+  display: block;
+  margin-top: 10rem;
+  text-align: center;
+}
+
+section {
+  margin: 4rem 0;
+  border: 1px solid #093b30;
+  box-shadow: 0 0 1rem 1rem #093b3094;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: justify;
+  width: fit-content;
+  max-width: 35%;
+}
+
+h3 {
+  text-align: center;
+  padding: 1rem;
+}
+legend {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  margin: 1rem 0;
+  padding: 2rem 0.5rem 1rem 1rem;
+  /* box-shadow: 0 0 1rem 0.5rem #093b30; */
+  color: #093b30;
+}
+
+input, select, textarea
+/* [type='text'],
+[type='email'],
+[type='date']  */ {
+  border: 0.15rem solid #093b30;
+  border-radius: 0.5rem;
+  padding: 0.15rem;
+  /* box-shadow: 0 0 0.5rem 0.01rem #093b30; */
+  color: #093b30;
+  background-color: #b9ede3e1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 0.15rem solid #16a085;
+  box-shadow: 0 0 0.5rem 0.01rem #093b30;
+  outline: 0.15rem solid #093b30;
+}
+label,
+input,
+textarea {
+  margin: 0.5rem 0.2rem;
+}
+
+label {
+  display: inline-block;
+}
+/* option:hover {
+  background-color: #093b30 !important;
+  color: red;
+} */
+
+.border {
+  border: 0.1rem solid #093b30;
+  border-radius: 1rem;
+}
+.block {
+  display: block;
+  text-align: center;
+}
+
+.align-left {
+  display: inline-block;
+  text-align: left;
+}
+.info {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+
+.donate {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.donate > p {
+  padding-bottom: 0.5rem;
+}
+
+.btn-button {
+  max-width: fit-content;
+  padding: 0.7rem;
+  margin: 0.2rem;
+  border: 2px solid #093b30;
+}
+
+.btn-button:hover {
+  background-color: #16a085;
+  color: black;
+}
+
+.cards-icons {
+  display: block;
+  margin: 0.6rem 0.5rem;
+  max-width: 20vh;
+  height: auto;
+}
+
+.texarea-resize {
+  display: grid;
+}

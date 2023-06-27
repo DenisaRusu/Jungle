@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+.logo {
+  width: 50px;
+  padding: 0;
+  user-select: none;
+  opacity: 95%;
+  cursor: pointer;
+}
+.navigation a {
+  position: relative;
+  font-size: 1.25em;
+  color: #093b2e;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  font-weight: 7em;
+}
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #093b2e;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.navigation .button-login {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #093b2e;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #093b2e;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation .button-login:hover {
+  background: #093b2e;
+  color: #b08aa9;
+}
+.box {
+  position: absolute;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease, height 0.2s ease;
+  transform: scale(0);
+  z-index: 99;
+}
+
+.box.active-popup {
+  transform: scale(1);
+}
+.box.active {
+  height: 520px;
+}
+.box .login-box {
+  width: 100%;
+  padding: 40px;
+}
+.box .login-box.login {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.box.active .login-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.box .login-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.box.active .login-box.register {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.login-box h2 {
+  font-size: 2em;
+  color: #164439;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #05271f;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #05271f;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #05271f;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.4em;
+  line-height: 57px;
+  color: #05271f;
+}
+.remember-me {
+  font-size: 0.9em;
+  color: #05271f;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-me label input {
+  accent-color: #05271f;
+  margin-right: 3px;
+}
+.remember-me a {
+  color: #05271f;
+  text-decoration: none;
+}
+.remember-me a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #05271f;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+}
+.btn:hover {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: #093b30;
+}
+.register {
+  font-size: 0.95em;
+  color: #05271f;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.register p a {
+  color: #062b22;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register p a:hover {
+  text-decoration: underline;
+}
+.box .close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  color: #165b4c;
+  cursor: pointer;
+  z-index: 1;
+}
+/* .section{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transform: translateY(-10em);
+} */
+
+#home {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  background-image: url(./assets/img/background.jpg);
+  border-radius: 1rem;
+  height: 80vh;
+  width: 90%;
+}
+.background-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#title {
+  position: absolute;
+  text-decoration: none;
+  font-size: 4.5em;
+  color: #093b2e;
+  text-shadow: 5px 5px 8px #2b584e4d;
+  opacity: 70%;
+  transform: translateY(-2em);
+}
+.static {
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.second-background {
+  background-color: #032614;
+  width: 100%;
+  height: 100%;
+}
+
+.image21 {
+  background-size: cover;
+  width: 100%;
+  opacity: 10%;
+}
