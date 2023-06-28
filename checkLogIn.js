@@ -3,7 +3,7 @@ import isUserLoggedIn from './serverSim/logIn.js';
 //import dataBase from './serverSim/dataBase.js';
 import getUserCookies from './getCookies.js';
 
-console.log(isUserLoggedIn);
+//console.log(isUserLoggedIn);
 
 if (checkUserCookies() || isUserLoggedIn) {
   console.log('user logged in');
@@ -11,6 +11,9 @@ if (checkUserCookies() || isUserLoggedIn) {
   const logInBtn = document.getElementById('logIn-btn');
   const logOutBtn = document.getElementById('logOut-btn');
   const cookieUserName = getUserCookies().substring(59);
+  const userOptions = document.getElementsByClassName('login-options');
+
+  Object.values(userOptions).map((item) => (item.style.display = 'inline'));
 
   logInBtn.style.display = 'none';
   logOutBtn.style.display = 'inline';

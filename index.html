@@ -12,6 +12,8 @@
     <script src="./serverSim/register.js" type="module" defer></script>
     <script src="getCookies.js" type="module" defer></script>
     <script src="./checkLogIn.js" type="module" defer></script>
+    <script src="./serverSim/logOut.js" type="module" defer></script>
+    <script src="./serverSim/deleteAccount.js" defer type="module"></script>
 
 </head>
 
@@ -29,6 +31,10 @@
             <button id="logIn-btn" class="button-login">Login</button>
             <button id="logOut-btn" class="button-login">LogOut</button>
             <span id="loggedIn-msg" class="login-msg"></span>
+            <select id="del-acc-user" class="login-options" name="Options" title="options">
+                <option class="login-options" value="1">Options</option>
+                <option class="login-options" value="2">Delete Account</option>
+            </select>
         </nav>
     </header>
     <!-- Login box -->

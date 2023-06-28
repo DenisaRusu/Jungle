@@ -8,7 +8,11 @@ function checkUserCookies() {
 
   const cookieToken = getUserCookies().substring(12, 48);
 
-  if (cookieUserName !== '' || cookieToken !== '') {
+  if (
+    cookieToken &&
+    cookieUserName &&
+    (cookieUserName !== '' || cookieToken !== '')
+  ) {
     const getUser = usersDataBase.filter(
       (user) => user.userName === cookieUserName
     );

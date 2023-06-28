@@ -293,3 +293,7 @@ header {
   display: none;
   padding-left: 5px;
 }
+
+.login-options {
+  display: none;
+}

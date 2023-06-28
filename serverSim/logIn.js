@@ -3,6 +3,7 @@ import dataBase from './dataBase.js';
 let isUserLoggedIn = false;
 const usersDataBase = dataBase();
 const loginInput = document.getElementById('login-form');
+
 const loginBtn = loginInput[3];
 
 loginInput.addEventListener('submit', (e) => {
