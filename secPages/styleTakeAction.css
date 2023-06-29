@@ -1,6 +1,8 @@
 body {
-  background-color: #16a08488;
-  color: #093b30;
+  /* background-color: #16a08488; */
+  background-image: url('../bun/background_final.png');
+
+  color: #031813;
 }
 header {
   background-color: #16a085;
@@ -21,7 +23,7 @@ h1 {
 section {
   margin: 4rem 0;
   border: 1px solid #093b30;
-  box-shadow: 0 0 1rem 1rem #093b3094;
+  box-shadow: 0 0 1rem 1rem #093b30a7;
   border-radius: 1rem;
   padding: 1rem;
   text-align: justify;
